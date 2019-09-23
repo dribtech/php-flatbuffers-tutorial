@@ -1,0 +1,34 @@
+namespace Schema.Game;
+
+enum Color: byte { SpaceGray=1, SpaceWhite, SpaceBlack }
+
+union Equipment { Weapon, CloakingDevice }
+
+struct Vector3D {
+    x: int;
+    y: int;
+    z: int;
+}
+
+table Spaceship {
+    position:Vector3D;
+    shield:short = 255;
+    spatialTorpedo:bool = false (deprecated);
+    photonTorpedo:bool = true (deprecated);
+    name:string;
+    color:Color = SpaceGray;
+    weapons:[Weapon];
+    equipped:Equipment;
+}
+
+table Weapon {
+    name:string;
+    damage:short;
+}
+
+table CloakingDevice {
+    name:string;
+    strength:short;
+}
+
+root_type Spaceship;

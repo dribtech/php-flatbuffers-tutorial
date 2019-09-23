@@ -1,0 +1,9 @@
+include "spaceship.fbs";
+
+namespace Schema.Game;
+
+table SpaceshipList {
+    list:[Spaceship];
+}
+
+root_type SpaceshipList;

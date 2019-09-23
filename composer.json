@@ -1,0 +1,12 @@
+{
+  "name": "drib/flatbuffers-php-tutorial",
+  "type": "project",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Drib\\": "src/",
+      "Google\\FlatBuffers\\": "google/flatbuffers/php/",
+      "Schema\\": "Schema"
+    }
+  }
+}
